@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciando com JS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Nunito:wght@1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="menu">
+            <button class="menu-item" onclick="toggleSubMenu(1)">1 - Switch</button>
+            <div class="submenu" id="submenu1">
+                <h2>Crie uma estrutura de controle de fluxo switch</h2>
+                <fieldset>
+                    <label for="input-escolha">Bebida:</label>
+                    <label for="esc-resultado">Resultado:</label>
+                </fieldset>
+                <fieldset>
+                    <input class="submenu-input" type="text" id="input-escolha" oninput="verificar()" placeholder="Escreva aqui...">
+                    <input class="submenu-input" type="text" id="esc-resultado" disabled>
+                </fieldset>
+                <fieldset>
+                    <img class="gifs" id="gif-refrigerante"" src="https://media.giphy.com/media/lqXufsLhDykJBawHHY/giphy.gif" alt="GIF de um refrigerante">
+                    <img class="gifs" id="gif-suco" src="https://media.giphy.com/media/UYjSgfWNHUkGknJeFa/giphy.gif" alt="GIF de um homem expremendo suco (animação)">
+                    <img class="gifs" id="gif-sorvete" src="https://media.giphy.com/media/gC6MRJ18JrEyFDK3qa/giphy.gif" alt="GIF de um sorvete de casquinha">
+                </fieldset>
+            </div>
+
+            <button class="menu-item" onclick="toggleSubMenu(2)">2 - Subtração</button>
+            <div class="submenu" id="submenu2">
+                <h2>Crie uma função para subtrair 2 valores</h2>
+                <fieldset>
+                    <input class="submenu-input" type="number" id="numero1" placeholder="Primeiro número">
+                    <span>-</span>
+                    <input class="submenu-input" type="number" id="numero2" placeholder="Segundo número">
+                    <button class="submenu-button" onclick="subtrair()">Subtrair</button>
+                    <input class="submenu-input" type="number" id="resultado" disabled>
+                </fieldset>
+            </div>
+
+            <button class="menu-item" onclick="toggleSubMenu(3)">3 - Divisão</button>
+            <div class="submenu" id="submenu3">
+                <h2>Crie uma função para dividir 2 valores</h2>
+                <fieldset>
+                    <input class="submenu-input" type="number" id="div-numero1" placeholder="Primeiro número">
+                    <span>/</span>
+                    <input class="submenu-input" type="number" id="div-numero2" placeholder="Segundo número">
+                    <button class="submenu-button" onclick="dividir()">Dividir</button>
+                    <input class="submenu-input" type="number" id="div-resultado" disabled>
+                </fieldset>
+            </div>
+
+            <button class="menu-item" onclick="toggleSubMenu(4)">4 - For</button>
+            <div class="submenu" id="submenu4">
+                <h2>Crie uma estrutura de repetição para imprimir os números de 1 a 1000</h2>
+                <fieldset id="fieldset4">
+                    <input class="submenu-input" type="number" id="input-contador" placeholder="1" disabled>
+                    <button class="submenu-button" onclick="contar()">Contar</button>
+                </fieldset>
+            </div>
+
+            <button class="menu-item" onclick="toggleSubMenu(5)">5 - Objeto</button>
+            <div class="submenu" id="submenu5">
+                <h2>Declare um objeto com propriedades e imprima a informação</h2>
+                <fieldset>
+                    <label for="input-rua">Rua:</label>
+                    <label for="input-numero">Número:</label>
+                    <label for="input-bairro">Bairro:</label>
+                    <label for="input-cidade">Cidade:</label>
+                </fieldset>
+                <fieldset>
+                    <input class="submenu-input" type="text" id="input-rua" disabled>
+                    <input class="submenu-input" type="number" id="input-numero" disabled>
+                    <input class="submenu-input" type="text" id="input-bairro" disabled>
+                    <input class="submenu-input" type="text" id="input-cidade" disabled>
+                </fieldset>
+            </div>
+
+            <button class="menu-item" onclick="toggleSubMenu(6)">6 - Const(string)</button>
+            <div class="submenu" id="submenu6">
+                <h2>Crie uma constante com o tipo primitivo string e imprima o valor dela no console e no alert</h2>
+                <fieldset>
+                    <button class="submenu-button" onclick="criarConst()">Criar</button>
+                </fieldset>
+        </div>
+    </body>
+</html>
