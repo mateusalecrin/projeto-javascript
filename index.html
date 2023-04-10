@@ -87,6 +87,16 @@
                 <fieldset>
                     <button class="submenu-button" onclick="criarConst()">Criar</button>
                 </fieldset>
+            </div>
+
+            <button class="menu-item" onclick="toggleSubMenu(7)">7 - Notas </button>
+            <div class="submenu" id="submenu7">
+                <h2>Faça uma comparação onde caso o usuario Nota > 7 = Passou de ano, Nota == 5 = Recuperação, Nota < 5 = Reprovado </h2>
+                <fieldset>
+                    <input class="submenu-input" type="number" id="input-notas" oninput="compararNotas()" placeholder="Notas">
+                    <input class="submenu-input" type="text" id="notas-resultado" disabled placeholder="Resultado">
+                </fieldset>
+            </div>
         </div>
     </body>
 </html>

@@ -190,3 +190,29 @@ function criarConst() {
     console.log(bemVindo);
     alert(bemVindo);
 }
+
+// ------------------------------------------------- SÉTIMA ATIVIDADE -------------------------------------------------
+// Função para comparar notas
+function compararNotas() {
+    let inputNotas = document.getElementById("input-notas");
+    let notasResultado = document.getElementById("notas-resultado");
+    let nota = inputNotas.value;
+
+
+    if (nota >= 7) {
+        notasResultado.style.backgroundColor = "green";
+        notasResultado.value = "Aprovado! 👏";
+    } else if ((nota < 7) && (nota >= 5)) {
+        notasResultado.style.backgroundColor = "yellow";
+        notasResultado.value = "Recuperação! 😕";
+    } else {
+        notasResultado.style.backgroundColor = "red";
+        notasResultado.value = "Reprovado! 👎"
+    }
+
+    setTimeout( function() {
+        inputNotas.value = "";
+        notasResultado.value = "";
+        notasResultado.style.backgroundColor = "#f7e4bb";
+    }, 3000);
+}
