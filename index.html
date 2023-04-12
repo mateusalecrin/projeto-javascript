@@ -15,7 +15,7 @@
         <div class="apresentacao">
             <small>Welcome to</small>
             <h1 id="apresentacao-titulo">JavaScript Immersion</h1>
-            <button id="apresentacao-button" type="button" onclick="toggleLight()" >Take a tour</button>
+            <button id="apresentacao-button" type="button">Take a tour</button>
         </div>
         
         <div class="bubbles">
@@ -31,6 +31,12 @@
         <div class="lamp-container">
             <img src="images/lamp.png" class="lamp" alt="Luminária">
             <img src="images/light.png" class="light" id="light" alt="Luz da luminária">
+        </div>
+        <div class= "light-area" id="light-areaid"></div>
+        
+        <div class="switch">
+            <audio id="audio" src="sounds/click.mp3" autostart="false"></audio>
+            <div class="btn" onclick="toggleLight()"></div>
         </div>
 
         <div class="menu">

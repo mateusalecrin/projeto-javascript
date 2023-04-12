@@ -1,4 +1,3 @@
-var light = document.getElementById("light");
 // Iniciar o contador em 1
 var contador = 1;
 // Variável para armazenar o ID do intervalo
@@ -32,10 +31,18 @@ function toggleSubMenu(option) {
 }  
 
 // Função acender a luz
-function toggleLight() {    
+function toggleLight() {
+    let light = document.getElementById("light");    
+    let lightArea = document.getElementById("light-areaid");
+    let audio = document.getElementById("audio");
+
     light.classList.toggle("on");
-    console.log("cheguei aqui");
-}
+    lightArea.classList.toggle("on");
+    
+    
+    audio.play();
+    
+ }
 // ------------------------------------------------- PRIMEIRA ATIVIDADE -----------------------------------------------
 // Função para verificar o value do input bebida e tomar decisões
 function verificar() {
