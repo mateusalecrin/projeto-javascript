@@ -35,13 +35,14 @@ function toggleLight() {
     let light = document.getElementById("light");    
     let lightArea = document.getElementById("light-areaid");
     let audio = document.getElementById("audio");
+    let btn = document.querySelector("body");
 
     light.classList.toggle("on");
     lightArea.classList.toggle("on");
-    
-    
+    light.classList.toggle("faillingLight");
+    lightArea.classList.toggle("faillingLight");
+    btn.classList.toggle("on");
     audio.play();
-    
  }
 // ------------------------------------------------- PRIMEIRA ATIVIDADE -----------------------------------------------
 // Função para verificar o value do input bebida e tomar decisões
