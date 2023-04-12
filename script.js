@@ -1,23 +1,15 @@
+var light = document.getElementById("light");
 // Iniciar o contador em 1
 var contador = 1;
 // Variável para armazenar o ID do intervalo
 var intervalId;
 
-// Ao carregar a página inicializa duas funções
+// Ao carregar a página inicializa as seguintes funções
 window.onload = function() {
-   initializeMenu();
    gerarDados();
 };
 
 // ------------------------------------------------- MENU ------------------------------------------------------------
-// Função para carregar as páginas com os menus fechados
-function initializeMenu() {
-    var submenus = document.getElementsByClassName("submenu");
-    for (var i = 0; i < submenus.length; i++) {
-      submenus[i].style.display = "none";
-    }
-}
-
 // Função para manter somente um menu aberto
 function toggleSubMenu(option) { 
     var submenu = document.getElementById("submenu" + option);
@@ -39,6 +31,11 @@ function toggleSubMenu(option) {
     }
 }  
 
+// Função acender a luz
+function toggleLight() {    
+    light.classList.toggle("on");
+    console.log("cheguei aqui");
+}
 // ------------------------------------------------- PRIMEIRA ATIVIDADE -----------------------------------------------
 // Função para verificar o value do input bebida e tomar decisões
 function verificar() {

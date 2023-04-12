@@ -12,6 +12,27 @@
         <script src="script.js"></script>
     </head>
     <body>
+        <div class="apresentacao">
+            <small>Welcome to</small>
+            <h1 id="apresentacao-titulo">JavaScript Immersion</h1>
+            <button id="apresentacao-button" type="button" onclick="toggleLight()" >Take a tour</button>
+        </div>
+        
+        <div class="bubbles">
+            <img src="images/bubble.png" alt="bolhas">
+            <img src="images/bubble.png" alt="bolhas">
+            <img src="images/bubble.png" alt="bolhas">
+            <img src="images/bubble.png" alt="bolhas">
+            <img src="images/bubble.png" alt="bolhas">
+            <img src="images/bubble.png" alt="bolhas">
+            <img src="images/bubble.png" alt="bolhas">
+        </div>
+
+        <div class="lamp-container">
+            <img src="images/lamp.png" class="lamp" alt="Luminária">
+            <img src="images/light.png" class="light" id="light" alt="Luz da luminária">
+        </div>
+
         <div class="menu">
             <button class="menu-item" onclick="toggleSubMenu(1)">1 - Switch</button>
             <div class="submenu" id="submenu1">
