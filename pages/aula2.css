@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: auto;
+    width: auto;
+    background: #0e0d0d;
+}
+
+body header {
+    position: absolute;
+    height: 80px;
+    left: 20%;
+    width: 80%;
+    top: 0;
+    background-color: #0e0d0d;
+}
+
+body .menu-lateral {
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    top: 0px;
+    background: #0e0d0d;
+}
+body .conteudo {
+    position: absolute;
+    height: 1000px;
+    padding: 1% 10%;
+    width: 80%;
+    top: 80px;
+    left: 380px;
+    background: yellow;
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
+	background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2, small, h3 {
+    width: 100%;
+    text-align: center;
+}
+
+body .conteudo .quadro-negro {
+    background: #fff;
+    padding: 20PX 40px;
+}
+
+body .conteudo .quadro-negro li .input-mostrar {
+    width: 300px;
+    height: 30px;
+    color: #0e0d0d;
+    font-size: 20px;    
+}
+
+body .conteudo .quadro-negro li .button {
+    width: 20px;
+    height: 30px;
+    background: blue;    
+}
+
+body .conteudo .quadro-negro li .input-resultado {
+    width: 300px;
+    height: 30px;
+    color: #0e0d0d;
+    font-size: 20px;    
+}
+
+
