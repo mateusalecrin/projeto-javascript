@@ -200,6 +200,7 @@
 // }
 
 // ------------------------------------------------- AULA 2 ------------------------------------------------------------
+// ------------------------------------------------- Exercicio 1 -------------------------------------------------------
 // Função para gerar números aleatórios
 function gerarNumeros() {
     function getRandom(min, max) {
@@ -219,4 +220,84 @@ function gerarNumeros() {
     inputResu.value = array[array.length -1];
     console.log("Valores:"+inputMostrar);
     console.log("Maior valor:"+inputResu);
+}
+
+// ------------------------------------------------- Exercicio 2 -------------------------------------------------------
+function mostrarFrases() {
+    let frases = [
+        'Nossas dúvidas são traidoras e nos fazem perder o que, com frequência, poderíamos ganhar, por simples medo de arriscar.  -  William Shakespare',
+        'Este CD-ROM pode conter mais informação do que todo estes papéis abaixo de mim - Bill Gates, 1994',
+        'A pior coisa que eu posso ser é igual a todo mundo. Eu odeio isso. - Arnold Schwarzenegger',
+        'Cada sonho que você deixa pra trás, é um pedaço do seu futuro que deixa de existir. - Steve Jobs ',
+        'A História é um conjunto de mentiras sobre as quais se chegou a um acordo. - Napoleão Bonaparte ',
+        'Ações não valem menos por não serem elogiadas. - Aragorn (Senhor dos anéis)',
+        'Você tem inimigos? Bom. Significa que você brigou por algo, alguma vez na vida. - Winston Churchill ',
+        'Um pouco de filosofia inclina a mente humana para o ateísmo, mas o aprofundamento na filosofia reaproxima a mente humana da religião - Francis Bacon',
+        'Na maioria das vezes, a diferença entre vencer e perder consiste em não desistir. - Walt Disney',
+        'Todo mundo é um gênio. Mas, se você julgar um peixe por sua capacidade de subir em uma árvore, ela vai gastar toda a sua vida acreditando que ele é estúpido. - Albert Einstein'];
+
+    //Muda a frase sempre que a função é chamada
+    let aleatorio = Math.floor(Math.random() * (frases.length));
+    let mostrar2 = document.getElementById("mostrar2");
+    let resu2 = document.getElementById("resu2");
+
+    mostrar2.value = frases[aleatorio];
+    resu2.value = frases[aleatorio].length;     
+}
+
+// ------------------------------------------------- Exercicio 3 -------------------------------------------------------
+function mostrarEmail() {
+    let mostrar3 = document.getElementById("mostrar3");
+    let resu3 = document.getElementById("resu3");
+    let nome = mostrar3.value;
+
+    let arrayAssociativo = {
+        Mateus: "mateus.alecrin@hotmail.com",
+        Carlos: "carlos.uchoa@edu.sc.senai.br",
+        Silvio: "silvio.sousa@edu.sc.senai.br" 
+    }
+
+    if (nome == "Mateus" || nome == "Silvio" || nome == "Carlos") {
+        resu3.value = arrayAssociativo[nome];
+    } else {
+        resu3.value = "Dica: nome do aluno ou professores..."
+        resu3.style.background = "red";
+    }
+}
+
+// ------------------------------------------------- Exercicio 4 -------------------------------------------------------
+
+function frutas() {
+    let frutasInput = document.getElementById("mostrar4");
+    let returnFrutas = document.getElementById("resu4"); 
+    let frutas = ["banana","abacate","morango","kiwi"];
+    let frutaEncontrada = false;
+    let a;
+
+    for (let i = 0; i < frutas.length; i ++) {
+        if (frutasInput.value == frutas[i]) {
+            frutaEncontrada = true;
+            a = i;    
+        }
+    }
+            
+    if (frutaEncontrada == true) {
+        returnFrutas.value = "Tem " + frutas[a] + " no array.";
+    } else {
+        returnFrutas.value = "Não tem " + frutasInput.value + " no array.";
+    }
+}
+
+// ------------------------------------------------- Exercicio 4 -------------------------------------------------------
+function dobro() {
+    let valor = document.getElementById("mostrar5").value;
+    let returnValor = document.getElementById("resu5");
+
+    returnValor.value = valor * 2; 
+}
+
+// ------------------------------------------------- Exercicio 5 -------------------------------------------------------
+// Crie uma função que receba um array de números como parâmetro e retorne um novo array com o dobro de cada número.
+function dobroArray() {
+
 }
