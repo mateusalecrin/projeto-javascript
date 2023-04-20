@@ -206,8 +206,8 @@ function gerarNumeros() {
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    inputMostrar = document.getElementById("mostrar1");
-    inputResu = document.getElementById("resu1");
+    let inputMostrar = document.getElementById("mostrar1");
+    let inputResu = document.getElementById("resu1");
     let texto = "";
     let array = [];
 
@@ -288,16 +288,75 @@ function frutas() {
     }
 }
 
-// ------------------------------------------------- Exercicio 4 -------------------------------------------------------
-function dobro() {
+// ------------------------------------------------- Exercicio 5 -------------------------------------------------------
+function dobrar() {
     let valor = document.getElementById("mostrar5").value;
     let returnValor = document.getElementById("resu5");
 
     returnValor.value = valor * 2; 
 }
 
-// ------------------------------------------------- Exercicio 5 -------------------------------------------------------
-// Crie uma função que receba um array de números como parâmetro e retorne um novo array com o dobro de cada número.
-function dobroArray() {
+// ------------------------------------------------- Exercicio 6 --------------------------------------------------------
+function dobrarArray() {
+    inputMostrar = document.getElementById("mostrar6");
+    inputResu = document.getElementById("resu6");
+    let dobrarArray = [];
+    let array = [];
 
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    for (let i = 0 ; i < 10 ; i++){
+        array.push(getRandom(0,100));
+    }
+    
+    dobrarArray = array.map(function(element) {
+        return element * 2;
+    });
+    
+    array.toString();
+    console.log(array);
+    dobrarArray.toString();
+    console.log(dobrarArray);
+    inputMostrar.value = array;
+    inputResu.value = dobrarArray; 
 }
+
+// ------------------------------------------------- Exercicio 7 -------------------------------------------------------
+function arrayLiteral() {
+    let zoologico = ["Piton", "Surucucu", "Cascavel", "Naja", "Jiboia"];
+    inputValue = document.getElementById("mostrar7");
+    inputResu = document.getElementById("resu7");
+    
+    valor = inputValue.value;
+    index = zoologico.indexOf(valor);
+    inputResu.value = index;
+    console.log(index);
+    console.log(zoologico);
+}
+
+// ------------------------------------------------- Exercicio 8 -------------------------------------------------------
+function upperCase() {
+    inputMostrar = document.getElementById("mostrar8");
+    inputResu = document.getElementById("resu8");
+
+    stringMinuscula = "No dark sarcasm in the classroom.";
+    inputMostrar.value = stringMinuscula;
+    stringMaiscula = stringMinuscula.toUpperCase();
+    inputResu.value = stringMaiscula;
+}
+
+// ------------------------------------------------- Exercicio 9 -------------------------------------------------------
+function parametros() {
+    inputValue = document.getElementById("mostrar9").value;
+    inputResu = document.getElementById("resu9");
+
+    inputResu.value = retornarParametro(inputValue);
+    
+    function retornarParametro(inputValue) {
+        novaVariavel = inputValue;
+        return novaVariavel;
+    }
+}
+
+// 

@@ -11,35 +11,16 @@ body {
     background: #0e0d0d;
 }
 
-body header {
-    position: absolute;
-    height: 80px;
-    left: 20%;
-    width: 80%;
-    top: 0;
-    background-color: #0e0d0d;
-}
-
-body .menu-lateral {
-    position: fixed;
-    height: 100%;
-    width: 20%;
-    top: 0px;
-    background: #0e0d0d;
-}
 body .conteudo {
     position: absolute;
-    height: 1000px;
-    padding: 1% 10%;
-    width: 80%;
-    top: 80px;
-    left: 380px;
-    background: yellow;
-	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
-	background-size: cover;
+    width: 60%;
+    top: 150px;
+    left: 20%;
+    background: #FEFAE0; 
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 h2, small, h3 {
@@ -48,22 +29,28 @@ h2, small, h3 {
 }
 
 body .conteudo .quadro-negro {
-    background: #fff;
-    padding: 20PX 40px;
+    width: 80%;
+    background: #F3DEBA;
+    padding: 20px 40px;
+    border-radius: 10px;
+    list-style: none;
 }
 
 body .conteudo .quadro-negro li .input-mostrar {
     width: 100%;
     height: 50px;
     color: #0e0d0d;
-    font-size: 16px;    
+    font-size: 16px;   
+    margin-bottom: 10px;
 }
 
 body .conteudo .quadro-negro li .button {
     width: 20px;
     height: 30px;
-    background: blue;    
+    background: blue;
+    margin-bottom: 10px;    
 }
+
 
 body .conteudo .quadro-negro li .input-resultado {
     width: 100%;
