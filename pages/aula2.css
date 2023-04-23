@@ -1,21 +1,29 @@
 * {
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
+body {
+    background-image: url("https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg");
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    animation: slidein 100s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;              
+}
 
-img {
-    pointer-events: none;
-    position: absolute;
-    object-fit: cover;
-    display: block;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-  
-}  
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+}
+    
+    @keyframes slidein {
+    from {background-position: top;background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    
+}
 
 body .radial-gradient {
     background: radial-gradient(circle,rgba(0,0,0,.6)0%,rgba(0,0,0,0)100%);
@@ -25,18 +33,18 @@ body .radial-gradient {
     width: 100%;
     left: 0;
     top: 0;
-
 }
 
 body .conteudo {
     position: relative;
     height: fit-content;
-    max-width: 800px;
+    max-width: 80%;
     padding: 50px;
     color: white;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     inset: 0;
 }
@@ -79,12 +87,13 @@ body .conteudo .navigation .navigation-options:is(.active, :hover) {
 }
 
 body .conteudo .exercicios {
-    width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%;
     background: rgba(0,0,0,.3);
     border: 1px solid rgba(255, 255, 255, .1);
-    padding: 25px;
+    padding: 15px;
     border-radius: 10px;
     backdrop-filter: blur(30px);
 }
@@ -103,7 +112,7 @@ body .conteudo .exercicios .exercicios-texto {
 }
 
 body .conteudo .exercicios .exercicios-input {
-    margin: 10px;
+    margin: 5px;
     height: 25px;
     padding: 5px;
     background: rgba(0, 0, 0);
@@ -112,11 +121,10 @@ body .conteudo .exercicios .exercicios-input {
     text-align: center;
     font-size: 20px;
     color: rgba(255, 255, 255);
-
 }
 
 body .conteudo .exercicios .button {
-    margin: 10px;
+    margin: 0px;
     margin-left: 35%;
     margin-right: 35%;
     height: 30px;
@@ -127,4 +135,14 @@ body .conteudo .exercicios .button {
     font-size: 20px;
     border: none;
 
+}
+
+#menu {
+    width: 100%;
+}
+
+#mostrar2 {
+    resize: none;
+    height: 90px;
+    overflow: hidden;
 }
