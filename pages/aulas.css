@@ -36,37 +36,35 @@ body .radial-gradient {
 }
 
 body .conteudo {
-    position: relative;
     height: fit-content;
     max-width: 80%;
     padding: 50px;
-    color: white;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
     inset: 0;
 }
 
 body .conteudo .navigation {
-    display: flex;
-    justify-content: space-around;
+    margin: 10px;
     border-radius: 10px;
-    backdrop-filter: blur(30px);
-    background: rgba(0,0,0,.3);
+    padding: 0px;
     border: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
     mix-blend-mode: hard-light;
-    padding: 0 12px 0 12px;
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(30px);
 }
 
 body .conteudo .navigation .navigation-options {
-    letter-spacing: 1px;
-    padding: 15px;
-    font: 14px; 
+    font-size: 16px; 
+    padding: 15px 0px;
+    border: none;
+    border-radius: 10px;
     font-weight: bold;
-    color: rgb(255, 255, 255, .40);
+    letter-spacing: 1px;
     text-decoration: none;
+    background: transparent;
+    color: rgb(255, 255, 255, .40);
+    width: 25%;
 }
 
 body .conteudo .navigation .navigation-options.active {
@@ -86,24 +84,39 @@ body .conteudo .navigation .navigation-options:is(.active, :hover) {
     color: white;
 }
 
-body .conteudo .exercicios {
+body .conteudo .aulas {
+    gap: 10px;
+    height: 0;
+    opacity: 0;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    transition: all 5s;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    inset: 0;
+}
+
+body .conteudo .aulas .exercicios {
+    width: 40%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 40%;
-    background: rgba(0,0,0,.3);
-    border: 1px solid rgba(255, 255, 255, .1);
-    padding: 15px;
-    border-radius: 10px;
     backdrop-filter: blur(30px);
+    background: rgba(0,0,0,.3);
+
 }
 
-body .conteudo .exercicios .exercicios-titulo {
+body .conteudo .aulas .exercicios .exercicios-titulo {
     font-size: 24px;
     font-weight: bold;
 }
 
-body .conteudo .exercicios .exercicios-texto {
+body .conteudo .aulas .exercicios .exercicios-texto {
     font-size: 14px;
     margin-top: 8px;
     margin-bottom: 10px;
@@ -111,7 +124,7 @@ body .conteudo .exercicios .exercicios-texto {
     color: rgba(255, 255, 255, .90);
 }
 
-body .conteudo .exercicios .exercicios-input {
+body .conteudo .aulas .exercicios .exercicios-input {
     margin: 5px;
     height: 25px;
     padding: 5px;
@@ -123,7 +136,7 @@ body .conteudo .exercicios .exercicios-input {
     color: rgba(255, 255, 255);
 }
 
-body .conteudo .exercicios .button {
+body .conteudo .aulas .exercicios .button {
     margin: 0px;
     margin-left: 35%;
     margin-right: 35%;
@@ -137,12 +150,73 @@ body .conteudo .exercicios .button {
 
 }
 
-#menu {
-    width: 100%;
+.inputs-de-calculo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, .30);
+    font-size: 16px;
+    letter-spacing: 3px;
 }
 
 #mostrar2 {
     resize: none;
     height: 90px;
     overflow: hidden;
+}
+
+.gifs {
+    top: 20%;
+    left: 45%;
+    display: none;
+    position: absolute;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.gifs.on {
+    display: block;
+}
+
+body .conteudo section.menu-on {
+    height: fit-content;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* EM CONSTRUÇÃO AULA3 E 4 */
+.lamp-container {
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0e0d0d;
+}
+
+.lamp {
+    z-index: 1;
+    width: 10%;
+}
+
+.light {
+    transform: translateX(-1%);
+    width: 35%;
+    z-index: 1;
+}
+
+#construction {
+    margin: 10px;
 }
