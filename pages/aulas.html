@@ -85,69 +85,94 @@
         </section>
 
         <section class="aulas" id="aula2">
-            <article class="exercicios" id="exercicio1">
-                <h1 class="exercicios-titulo">Exercício 1</h1>
-                <p class="exercicios-texto">Crie uma função que receba um array de números e retorne o valor máximo.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar1" disabled>
-                <button class="button" id="gerarNumeros" type="button" onclick="gerarNumeros()">Run</button>
-                <input class="exercicios-input resultado" type="number" id="resu1" disabled>
-            </article>
-            <article class="exercicios" id="exercicio2">
-                <h1 class="exercicios-titulo">Exercício 2</h1>
-                <p class="exercicios-texto">Crie uma função que receba um array de strings e retorne o número total de caracteres.</p>
-                <textarea class="exercicios-input mostrar" type="text" id="mostrar2" disabled></textarea>
-                <button class="button" id="mostrarFrases" type="button" onclick="mostrarFrases()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu2" disabled>
-            </article>
-            <article class="exercicios" id="exercicio3">
-                <h1 class="exercicios-titulo">Exercício 3</h1>
-                <p class="exercicios-texto">Crie um array associativo que armazene o nome e o e-mail de três pessoas diferentes e, em seguida, crie uma função que retorne o e-mail de uma pessoa com base no seu nome.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar3">
-                <button class="button" id="mostrarEmail" type="button" onclick="mostrarEmail()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu3" disabled>
-            </article>
-            <article class="exercicios" id="exercicio4">
-                <h1 class="exercicios-titulo">Exercício 4</h1>
-                <p class="exercicios-texto">Crie um array de forma literal que armazene os nomes de cinco frutas diferentes e, em seguida, crie uma função que retorne uma mensagem indicando se a fruta informada está presente ou não no array.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar4">
-                <button class="button" id="frutas" type="button" onclick="frutas()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu4" disable>
-            </article>
-            <article class="exercicios" id="exercicio5">
-                <h1 class="exercicios-titulo">Exercício 5</h1>
-                <p class="exercicios-texto">Crie uma variável que armazene um número e, em seguida, crie uma função que retorne o dobro desse número.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar5">
-                <button class="button" id="dobro" type="button" onclick="dobrar()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu5">
-            </article>
-            <article class="exercicios" id="exercicio6">
-                <h1 class="exercicios-titulo">Exercício 6</h1>
-                <p class="exercicios-texto">Crie uma função que receba um array de números como parâmetro e retorne um novo array com o dobro de cada número.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar6" disabled>
-                <button class="button" id="dobroArray" type="button" onclick="dobrarArray()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu6">
-            </article>
-            <article class="exercicios" id="exercicio7">
-                <h1 class="exercicios-titulo">Exercício 7</h1>
-                <p class="exercicios-texto">Crie um array de forma literal que armazene os nomes de cinco animais diferentes e, em seguida, crie uma função que retorne uma mensagem indicando a posição do animal informado no array.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar7">
-                <button class="button" id="arrayLiteral" type="button" onclick="arrayLiteral()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu7">
-            </article>
-            <article class="exercicios" id="exercicio8">
-                <h1 class="exercicios-titulo">Exercício 8</h1>
-                <p class="exercicios-texto">Crie uma variável que armazene uma string e, em seguida, crie uma função que retorne essa string em maiúsculas.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar8" disabled>
-                <button class="button" id="upperCase" type="button" onclick="upperCase()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu8">
-            </article>
-            <article class="exercicios" id="exercicio9">
-                <h1 class="exercicios-titulo">Exercício 9</h1>
-                <p class="exercicios-texto">Crie uma função que receba uma variável como parâmetro e, em seguida, armazene esse parâmetro em uma nova variável. Em seguida, retorne a nova variável.</p>
-                <input class="exercicios-input mostrar" type="text" id="mostrar9">
-                <button class="button" id="gerarNumeros" type="button" onclick="parametros()">Run</button>
-                <input class="exercicios-input resultado" type="text" id="resu9">
-            </article>
+            <nav class="navigation" id="menu2">
+                <button class="navigation-options" onclick="toggleDisplay('parte1')">Parte 1</button>
+                <button class="navigation-options" onclick="toggleDisplay('parte2')">Parte 2</button>
+            </nav>
+
+            <section class="aulas" id="aula2parte1">
+                <article class="exercicios" id="exercicio1">
+                    <h1 class="exercicios-titulo">Exercício 1</h1>
+                    <p class="exercicios-texto">Crie uma função que receba um array de números e retorne o valor máximo.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar1" disabled>
+                    <button class="button" id="gerarNumeros" type="button" onclick="gerarNumeros()">Run</button>
+                    <input class="exercicios-input resultado" type="number" id="resu1" disabled>
+                </article>
+                <article class="exercicios" id="exercicio2">
+                    <h1 class="exercicios-titulo">Exercício 2</h1>
+                    <p class="exercicios-texto">Crie uma função que receba um array de strings e retorne o número total de caracteres.</p>
+                    <textarea class="exercicios-input mostrar" type="text" id="mostrar2" disabled></textarea>
+                    <button class="button" id="mostrarFrases" type="button" onclick="mostrarFrases('todos')">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu2" disabled>
+                </article>
+                <article class="exercicios" id="exercicio3">
+                    <h1 class="exercicios-titulo">Exercício 3</h1>
+                    <p class="exercicios-texto">Crie um array associativo que armazene o nome e o e-mail de três pessoas diferentes e, em seguida, crie uma função que retorne o e-mail de uma pessoa com base no seu nome.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar3">
+                    <button class="button" id="mostrarEmail" type="button" onclick="mostrarEmail()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu3" disabled>
+                </article>
+                <article class="exercicios" id="exercicio4">
+                    <h1 class="exercicios-titulo">Exercício 4</h1>
+                    <p class="exercicios-texto">Crie um array de forma literal que armazene os nomes de cinco frutas diferentes e, em seguida, crie uma função que retorne uma mensagem indicando se a fruta informada está presente ou não no array.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar4">
+                    <button class="button" id="frutas" type="button" onclick="frutas()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu4" disable>
+                </article>
+                <article class="exercicios" id="exercicio5">
+                    <h1 class="exercicios-titulo">Exercício 5</h1>
+                    <p class="exercicios-texto">Crie uma variável que armazene um número e, em seguida, crie uma função que retorne o dobro desse número.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar5">
+                    <button class="button" id="dobro" type="button" onclick="dobrar()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu5">
+                </article>
+                <article class="exercicios" id="exercicio6">
+                    <h1 class="exercicios-titulo">Exercício 6</h1>
+                    <p class="exercicios-texto">Crie uma função que receba um array de números como parâmetro e retorne um novo array com o dobro de cada número.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar6" disabled>
+                    <button class="button" id="dobroArray" type="button" onclick="dobrarArray()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu6">
+                </article>
+                <article class="exercicios" id="exercicio7">
+                    <h1 class="exercicios-titulo">Exercício 7</h1>
+                    <p class="exercicios-texto">Crie um array de forma literal que armazene os nomes de cinco animais diferentes e, em seguida, crie uma função que retorne uma mensagem indicando a posição do animal informado no array.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar7">
+                    <button class="button" id="arrayLiteral" type="button" onclick="arrayLiteral()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu7">
+                </article>
+                <article class="exercicios" id="exercicio8">
+                    <h1 class="exercicios-titulo">Exercício 8</h1>
+                    <p class="exercicios-texto">Crie uma variável que armazene uma string e, em seguida, crie uma função que retorne essa string em maiúsculas.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar8" disabled>
+                    <button class="button" id="upperCase" type="button" onclick="upperCase()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu8">
+                </article>
+                <article class="exercicios" id="exercicio9">
+                    <h1 class="exercicios-titulo">Exercício 9</h1>
+                    <p class="exercicios-texto">Crie uma função que receba uma variável como parâmetro e, em seguida, armazene esse parâmetro em uma nova variável. Em seguida, retorne a nova variável.</p>
+                    <input class="exercicios-input mostrar" type="text" id="mostrar9">
+                    <button class="button" id="gerarParametros" type="button" onclick="parametros()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu9">
+                </article>
+            </section>
+
+            <section class="aulas" id="aula2parte2">
+                <article class="exercicios" id="exercicio10">
+                    <h1 class="exercicios-titulo">Exercício 1</h1>
+                    <p class="exercicios-texto">Crie uma função que receba uma string e retorne o número de vogais presentes nessa string.</p>
+                    <textarea class="exercicios-input mostrar" type="text" id="mostrar10" disabled></textarea>
+                    <button class="button" type="button" onclick="mostrarFrases('vogais')">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="resu10">
+                </article>
+
+                <article class="exercicios" id="exercicio11">
+                    <h1 class="exercicios-titulo">Exercício 2</h1>
+                    <p class="exercicios-texto">Crie uma função que receba um número e retorne o fatorial desse número.</p>
+                    <input type="text" class="exercicios-input">
+                    <button class="button">Run</button>
+                    <input type="text" class="exercicios-input">
+                </article>
+            </section>
         </section>
 
         <section class="aulas" id="aula3">

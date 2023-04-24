@@ -2,9 +2,11 @@
 function toggleDisplay(aula) {
     let toggleAula1 = document.getElementById("aula1");
     let toggleAula2 = document.getElementById("aula2");
-
+    let toggleAula2Pt1 = document.getElementById("aula2parte1");
+    let toggleAula2Pt2 = document.getElementById("aula2parte2");
     let toggleAula3 = document.getElementById("aula3");
     let toggleAula4 = document.getElementById("aula4");
+
 
     console.log(aula);
     switch(aula) {
@@ -35,6 +37,14 @@ function toggleDisplay(aula) {
             toggleAula1.classList.remove("menu-on");
             toggleAula2.classList.remove("menu-on");
             toggleAula3.classList.remove("menu-on");
+        break;
+        case "parte1":
+            toggleAula2Pt1.classList.toggle("menu-on");
+            toggleAula2Pt2.classList.remove("menu-on");
+        break;
+        case "parte2":
+            toggleAula2Pt1.classList.remove("menu-on");
+            toggleAula2Pt2.classList.toggle("menu-on");
         break;
     }
 }
@@ -261,7 +271,7 @@ function gerarNumeros() {
 }
 
 // ------------------------------------------------- Exercicio 2 -------------------------------------------------------
-function mostrarFrases() {
+function mostrarFrases(caracteres) {
     let frases = [
         'Nossas dúvidas são traidoras e nos fazem perder o que, com frequência, poderíamos ganhar, por simples medo de arriscar.  -  William Shakespare',
         'Este CD-ROM pode conter mais informação do que todo estes papéis abaixo de mim - Bill Gates, 1994',
@@ -278,9 +288,22 @@ function mostrarFrases() {
     let aleatorio = Math.floor(Math.random() * (frases.length));
     let mostrar2 = document.getElementById("mostrar2");
     let resu2 = document.getElementById("resu2");
+    let mostrar10 = document.getElementById("mostrar10");
+    let resu10 = document.getElementById("resu10");
 
-    mostrar2.value = frases[aleatorio];
-    resu2.value = frases[aleatorio].length;     
+    switch (caracteres) {
+        case "todos":
+            mostrar2.value = frases[aleatorio];
+            resu2.value = frases[aleatorio].length;     
+        break;
+        case "vogais":
+            mostrar10.value = frases[aleatorio];
+
+            resu10.value = frases[aleatorio].match(/[aeiouáàâãéèêíïóôõöú]/gi).length;
+            stringArray = frases[aleatorio].match(/[aeiouáàâãéèêíïóôõöú]/gi);
+            console.log(stringArray.toString());
+        break;
+    }
 }
 
 // ------------------------------------------------- Exercicio 3 -------------------------------------------------------

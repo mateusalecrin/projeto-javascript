@@ -25,7 +25,7 @@ body {
     
 }
 
-body .radial-gradient {
+.radial-gradient {
     background: radial-gradient(circle,rgba(0,0,0,.6)0%,rgba(0,0,0,0)100%);
     position: absolute;
     display: block;
@@ -35,7 +35,7 @@ body .radial-gradient {
     top: 0;
 }
 
-body .conteudo {
+.conteudo {
     height: fit-content;
     max-width: 80%;
     padding: 50px;
@@ -43,18 +43,18 @@ body .conteudo {
     inset: 0;
 }
 
-body .conteudo .navigation {
-    margin: 10px;
+.navigation {
+    margin-top: 2px;
     border-radius: 10px;
     padding: 0px;
     border: 1px solid rgba(255, 255, 255, .1);
     display: flex;
     mix-blend-mode: hard-light;
     background: rgba(0,0,0,.3);
-    backdrop-filter: blur(30px);
+    justify-content: space-evenly;
 }
 
-body .conteudo .navigation .navigation-options {
+.navigation-options {
     font-size: 16px; 
     padding: 15px 0px;
     border: none;
@@ -64,14 +64,14 @@ body .conteudo .navigation .navigation-options {
     text-decoration: none;
     background: transparent;
     color: rgb(255, 255, 255, .40);
-    width: 25%;
+    width: 100%;
 }
 
-body .conteudo .navigation .navigation-options.active {
+.navigation-options.active {
     background: rgba(255, 255, 255, .15);
 }
 
-body .conteudo .navigation .navigation-options:hover:not(.active) {
+.navigation-options:hover:not(.active) {
     background: rgba(255, 255, 255, .15)
 }
 
@@ -80,25 +80,30 @@ body .conteudo .navigation .navigation-options:hover:not(.active) {
     background: rgba(255, 255, 255, .30);
 }
 
-body .conteudo .navigation .navigation-options:is(.active, :hover) {
+.navigation-options:is(.active, :hover) {
     color: white;
 }
 
-body .conteudo .aulas {
+.aulas {
     gap: 10px;
     height: 0;
     opacity: 0;
     margin: auto;
     display: flex;
     overflow: hidden;
-    transition: all 5s;
+    transition: all 1s;
     justify-content: center;
     flex-wrap: wrap;
     color: white;
     inset: 0;
 }
 
-body .conteudo .aulas .exercicios {
+#aula2 {
+    flex-direction: column;
+}
+
+
+.exercicios {
     width: 40%;
     padding: 15px;
     border-radius: 10px;
@@ -111,12 +116,12 @@ body .conteudo .aulas .exercicios {
 
 }
 
-body .conteudo .aulas .exercicios .exercicios-titulo {
+.exercicios .exercicios-titulo {
     font-size: 24px;
     font-weight: bold;
 }
 
-body .conteudo .aulas .exercicios .exercicios-texto {
+.exercicios .exercicios-texto {
     font-size: 14px;
     margin-top: 8px;
     margin-bottom: 10px;
@@ -124,7 +129,7 @@ body .conteudo .aulas .exercicios .exercicios-texto {
     color: rgba(255, 255, 255, .90);
 }
 
-body .conteudo .aulas .exercicios .exercicios-input {
+.exercicios .exercicios-input {
     margin: 5px;
     height: 25px;
     padding: 5px;
@@ -136,7 +141,7 @@ body .conteudo .aulas .exercicios .exercicios-input {
     color: rgba(255, 255, 255);
 }
 
-body .conteudo .aulas .exercicios .button {
+.exercicios .button {
     margin: 0px;
     margin-left: 35%;
     margin-right: 35%;
@@ -162,7 +167,7 @@ input::placeholder {
     letter-spacing: 3px;
 }
 
-#mostrar2 {
+#mostrar2, #mostrar10 {
     resize: none;
     height: 90px;
     overflow: hidden;
@@ -181,7 +186,7 @@ input::placeholder {
     display: block;
 }
 
-body .conteudo section.menu-on {
+section.menu-on {
     height: fit-content;
     opacity: 1;
 }
