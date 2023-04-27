@@ -38,7 +38,7 @@ body {
 .conteudo {
     height: fit-content;
     max-width: 80%;
-    padding: 50px;
+    padding: 30px;
     margin: auto;
     inset: 0;
 }
@@ -105,7 +105,7 @@ body {
 
 .exercicios {
     width: 40%;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, .1);
     display: flex;
@@ -169,8 +169,9 @@ input::placeholder {
 
 #mostrar2, #mostrar10 {
     resize: none;
-    height: 90px;
+    height: 70px;
     overflow: hidden;
+    font-size: 14px;
 }
 
 .gifs {
@@ -191,7 +192,9 @@ section.menu-on {
     opacity: 1;
 }
 
-
+.inputs-de-calculo input {
+    width: 45%;
+}
 
 
 
