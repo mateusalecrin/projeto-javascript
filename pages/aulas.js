@@ -420,3 +420,44 @@ function parametros() {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------- AULA 3 ------------------------------------------------------------
+// ----------------------- PRIMEIRA ATIVIDADE  -----------------------
+// Crie uma função que recebe um nome e retorna uma string utilizando template literals para dar boas-vindas ao usuário.
+
+function aula3Ex1() {
+    let inputNome = document.getElementById("aula3Ex1Input1");
+    let inputMostrar = document.getElementById("aula3Ex1Input2"); 
+    nome = inputNome.value;
+
+    stringBemVindo = `Bem-vindo ${nome}`;
+    if (nome == "") {
+        inputMostrar.value = "Você não disse seu nome 😕"
+    } else {
+        inputMostrar.value = stringBemVindo;
+        alert(stringBemVindo);
+        console.log(stringBemVindo);   
+    }
+}
+
+// ----------------------- SEGUNDA ATIVIDADE  -----------------------
+// Crie uma função que recebe uma data e retorna uma string formatada utilizando template literals.
+function aula3Ex2() {
+    let inputData = document.getElementById("aula3Ex2Input1");
+    let inputMostrar = document.getElementById("aula3Ex2Input2");
+    data = inputData.value;
+
+    stringDataFormatada = ``
+}
