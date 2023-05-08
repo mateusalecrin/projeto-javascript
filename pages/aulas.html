@@ -86,11 +86,11 @@
 
         <section class="aulas" id="aula2">
             <nav class="navigation" id="menu2">
-                <button class="navigation-options" onclick="toggleDisplay('parte1')">Parte 1</button>
-                <button class="navigation-options" onclick="toggleDisplay('parte2')">Parte 2</button>
+                <button class="navigation-options" onclick="toggleDisplay('aula2Parte1')">Parte 1</button>
+                <button class="navigation-options" onclick="toggleDisplay('aula2Parte2')">Parte 2</button>
             </nav>
 
-            <section class="aulas" id="aula2parte1">
+            <section class="aulas" id="aula2Parte1">
                 <article class="exercicios" id="exercicio1">
                     <h1 class="exercicios-titulo">Exercício 1</h1>
                     <p class="exercicios-texto">Crie uma função que receba um array de números e retorne o valor máximo.</p>
@@ -156,46 +156,120 @@
                 </article>
             </section>
 
-            <section class="aulas" id="aula2parte2">
-                <article class="exercicios" id="exercicio10">
+            <section class="aulas" id="aula2Parte2">
+                <article class="exercicios" id="parte2Exercicio1">
                     <h1 class="exercicios-titulo">Exercício 1</h1>
                     <p class="exercicios-texto">Crie uma função que receba uma string e retorne o número de vogais presentes nessa string.</p>
-                    <textarea class="exercicios-input mostrar" type="text" id="mostrar10" disabled></textarea>
+                    <textarea class="exercicios-input mostrar" type="text" id="pt2Mostrar1" disabled></textarea>
                     <button class="button" type="button" onclick="mostrarFrases('vogais')">Run</button>
-                    <input class="exercicios-input resultado" type="text" id="resu10">
+                    <input class="exercicios-input resultado" type="text" id="pt2Resu1">
                 </article>
 
-                <article class="exercicios" id="exercicio11">
+                <article class="exercicios" id="parte2Exercicio2">
                     <h1 class="exercicios-titulo">Exercício 2</h1>
                     <p class="exercicios-texto">Crie uma função que receba um número e retorne o fatorial desse número.</p>
-                    <input type="text" class="exercicios-input">
-                    <button class="button">Run</button>
-                    <input type="text" class="exercicios-input">
+                    <input class="exercicios-input mostrar" type="number" id="pt2Mostrar2" placeholder="Número">
+                    <button class="button" type="button" onclick="factorial()">Run</button>
+                    <input class="exercicios-input resultado" type="text" id="pt2Resu2" disabled>
                 </article>
+
+                <article class="exercicios" id="parte2Exercicio2">
+                    <h1 class="exercicios-titulo">Exercício 3</h1>
+                    <p class="exercicios-texto">Crie um formulário HTML que tenha um campo de entrada de texto para o nome e outro para o e-mail. Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente (ou seja, se o campo de nome não está vazio e se o campo de e-mail contém um endereço de e-mail válido).</p>
+                    <form name="form1" action="">
+                        <fieldset>
+                            <label for="nome">Nome:</label>
+                            <input class="exercicios-input mostrar" name="nome" type="text" onblur="validarNome(form1.nome)" maxlength="20">
+                            <label for="email">Email:</label>
+                            <input class="exercicios-input mostrar" name="email" type="email" onblur="validarEmail(form1.email)" maxlength="60">
+                        </fieldset>
+                        <div id="msgnome"></div>
+                        <div id="msgemail"></div>
+                    </form>
+                </article>
+
+                <article class="exercicios" id="parte2Exercicio3">
+                    <h1 class="exercicios-titulo">Exercício 4</h1>
+                    <p class="exercicios-texto">Crie um formulário HTML que tenha um campo de entrada de número para a idade e outro para a altura em centímetros. Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente (ou seja, se a idade está entre 18 e 60 anos e se a altura está entre 150 e 200 centímetros).</p>
+                    <form name="form2" action="">
+                        <fieldset>
+                            <label for="idade">Idade:</label>
+                            <input class="exercicios-input mostrar" name="idade" type="number" onblur="validarIdade(form2.idade)" maxlength="3">
+                            <label for="altura">Altura:</label>
+                            <input class="exercicios-input mostrar" name="altura" type="number" onblur="validarAltura(form2.altura)" maxlength="3">
+                        </fieldset>
+                        <div id="msgidade"></div>
+                        <div id="msgaltura"></div>
+                    </form>
+                </article>
+
+
             </section>
         </section>
 
         <section class="aulas" id="aula3">
-            <article class="exercicios">
-                <h1 class="exercicios-titulo">Exercício 1</h1>
-                <p class="exercicios-texto">Crie uma função que recebe um nome e retorna uma string utilizando template literals para dar boas-vindas ao usuário.</p>
-                <input id="aula3Ex1Input1" class="exercicios-input mostrar" type="text" placeholder="Seu nome">
-                <button class="button" onclick="aula3Ex1()">Run</button>
-                <input id="aula3Ex1Input2" class="exercicios-input resultado" type="text" disabled>
-            </article>
+            <nav class="navigation" id="menu3">
+                <button class="navigation-options" onclick="toggleDisplay('aula3Parte1')">Template Literals</button>
+                <button class="navigation-options" onclick="toggleDisplay('aula3Parte2')">Arrow Functions</button>
+                <button class="navigation-options" onclick="toggleDisplay('aula3Parte3')">JSON</button>
+            </nav>
 
-            <article class="exercicios">
-                <h1 class="exercicios-titulo">Exercício 2</h1>
-                <p class="exercicios-texto">Crie uma função que recebe uma data e retorna uma string formatada utilizando template literals.</p>
-                <input id="aula3Ex2Input1" class="exercicios-input mostrar" type="data">
-                <button class="button" onclick="aula3Ex2()">Run</button>
-                <input id="aula3Ex2Input2" class="exercicios-input resultado" type="text" disabled>
-            </article>
+            <section class="aulas" id="aula3Parte1">
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 1</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um nome e retorna uma string utilizando template literals para dar boas-vindas ao usuário.</p>
+                    <input id="aula3Pt1Ex1Input1" class="exercicios-input mostrar" type="text" placeholder="Seu nome">
+                    <button class="button" onclick="aula3Ex1()">Run</button>
+                    <input id="aula3Pt1Ex1Input2" class="exercicios-input resultado" type="text" disabled>
+                </article>
 
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 2</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe uma data e retorna uma string formatada utilizando template literals.</p>
+                    <input id="aula3Pt1Ex2Input1" class="exercicios-input mostrar" type="date">
+                    <button class="button" onclick="aula3Ex2()">Run</button>
+                    <input id="aula3Pt1Ex2Input2" class="exercicios-input resultado" type="text" disabled>
+                </article>
 
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 3</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um objeto com as informações de um produto e retorna uma string utilizando template literals para exibir as informações na tela.</p>
+                    <textarea id="aula3Pt1Ex3Input1" class="exercicios-input resultado"></textarea>
+                    <button class="button" onclick="aula3Ex3()">Run</button>
+                </article>
+            </section>
 
+            <section class="aulas" id="aula3Parte2">
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 1</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um array de números e utiliza arrow function para retornar a soma de todos eles.</p>
+                    <input id="aula3Pt2Ex1Input1" class="exercicios-input resultado" type="text" disabled>
+                    <button class="button" onclick="aula3Pt2Ex1()">Run</button>
+                </article>
 
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 2</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um array de strings e utiliza arrow function para retornar o número total de caracteres em todas as strings.</p>
+                    <input id="aula3Pt2Ex2Input1" class="exercicios-input resultado" type="text" disabled>
+                    <button class="button" onclick="aula3Pt2Ex2()">Run</button>
+                </article>
 
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 3</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um objeto com informações de um produto e utiliza arrow function para retornar a descrição do produto em uma string.</p>
+                    <textarea id="aula3Pt2Ex3Input1" class="exercicios-input resultado" disabled></textarea>
+                    <button class="button" onclick="aula3Pt2Ex3()">Run</button>
+                </article>
+            </section>
+
+            <section class="aulas" id="aula3Parte3">
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 1</h1>
+                    <p class="exercicios-texto">Crie um objeto JSON com informações sobre uma pessoa, como nome, idade e endereço.</p>
+                    <textarea id="aula3Pt3Ex1Input1" class="exercicios-input resultado" disabled></textarea>
+                    <button class="button" onclick="aula3Pt3Ex1()">Run</button>
+                </article>
+            </section>
 
         </section>
 

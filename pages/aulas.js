@@ -2,10 +2,14 @@
 function toggleDisplay(aula) {
     let toggleAula1 = document.getElementById("aula1");
     let toggleAula2 = document.getElementById("aula2");
-    let toggleAula2Pt1 = document.getElementById("aula2parte1");
-    let toggleAula2Pt2 = document.getElementById("aula2parte2");
+    let toggleAula2Pt1 = document.getElementById("aula2Parte1");
+    let toggleAula2Pt2 = document.getElementById("aula2Parte2");
     let toggleAula3 = document.getElementById("aula3");
+    let toggleAula3Pt1 = document.getElementById("aula3Parte1");
+    let toggleAula3Pt2 = document.getElementById("aula3Parte2");
+    let toggleAula3Pt3 = document.getElementById("aula3Parte3");
     let toggleAula4 = document.getElementById("aula4");
+
 
 
     console.log(aula);
@@ -24,6 +28,14 @@ function toggleDisplay(aula) {
             toggleAula3.classList.remove("menu-on");
             toggleAula4.classList.remove("menu-on");
         break;
+        case "aula2Parte1":
+            toggleAula2Pt1.classList.toggle("menu-on");
+            toggleAula2Pt2.classList.remove("menu-on");
+        break;
+        case "aula2Parte2":
+            toggleAula2Pt1.classList.remove("menu-on");
+            toggleAula2Pt2.classList.toggle("menu-on");
+        break;
         case "aula3":
             toggleAula3.classList.toggle("menu-on");
             
@@ -31,20 +43,27 @@ function toggleDisplay(aula) {
             toggleAula2.classList.remove("menu-on");
             toggleAula4.classList.remove("menu-on");
         break;
+        case "aula3Parte1":
+            toggleAula3Pt1.classList.toggle("menu-on");
+            toggleAula3Pt2.classList.remove("menu-on");
+            toggleAula3Pt3.classList.remove("menu-on");
+        break;
+        case "aula3Parte2":
+            toggleAula3Pt1.classList.remove("menu-on");
+            toggleAula3Pt2.classList.toggle("menu-on");
+            toggleAula3Pt3.classList.remove("menu-on");
+        break;
+        case "aula3Parte3":
+            toggleAula3Pt1.classList.remove("menu-on");
+            toggleAula3Pt2.classList.remove("menu-on");
+            toggleAula3Pt3.classList.toggle("menu-on");
+        break;
         case "aula4":
             toggleAula4.classList.toggle("menu-on");
             
             toggleAula1.classList.remove("menu-on");
             toggleAula2.classList.remove("menu-on");
             toggleAula3.classList.remove("menu-on");
-        break;
-        case "parte1":
-            toggleAula2Pt1.classList.toggle("menu-on");
-            toggleAula2Pt2.classList.remove("menu-on");
-        break;
-        case "parte2":
-            toggleAula2Pt1.classList.remove("menu-on");
-            toggleAula2Pt2.classList.toggle("menu-on");
         break;
     }
 }
@@ -65,8 +84,19 @@ window.onload = function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 // ------------------------------------------------- AULA 1 ------------------------------------------------------------    
-// ----------------------- PRIMEIRA ATIVIDADE  -----------------------
+// ----------------------- EXERCÍCIO 1  -----------------------
 // Função para verificar o value do input bebida e tomar decisões
 function verificar() {
     let aula1Ex1Input1 = document.getElementById("aula1Ex1Input1");
@@ -125,7 +155,7 @@ function verificar() {
     }
 }
 
-//  ----------------------- SEGUNDA ATIVIDADE  -----------------------
+//  ----------------------- EXERCÍCIO 2  -----------------------
 // Função para subtrair os números e exibir o resultado
 function subtrair() {
     // Obtém os valores dos números digitados
@@ -139,7 +169,7 @@ function subtrair() {
     console.log(numero1 + " - " + numero2 + " = " + resultado + ".");
 }
 
-//  ----------------------- TERCEIRA ATIVIDADE  -----------------------
+//  ----------------------- EXERCÍCIO 3  -----------------------
 // Função para dividir os números e exibir o resultado
 function dividir() {
     // Obtém os valores dos números digitados
@@ -161,7 +191,7 @@ function dividir() {
     }
 }
 
-//  ----------------------- QUARTA ATIVIDADE  -----------------------
+//  ----------------------- EXERCÍCIO 4  -----------------------
 // Função para iniciar a contagem
 function contar() {
     console.log("Iniciando a contagem!");
@@ -189,7 +219,7 @@ function atualizarContagem() {
     }
 }
 
-//  ----------------------- QUINTA ATIVIDADE  -----------------------
+//  ----------------------- EXERCÍCIO 5  -----------------------
 // Função para declarar informações de um objeto e imprimi-las.
 function gerarDados() {
     console.log("Gerando dados...." + "\nRua:");
@@ -206,7 +236,7 @@ function gerarDados() {
     document.getElementById("aula1Ex5cidade").value = objetoPessoa.cidade;
 }
 
-//  ----------------------- SEXTA ATIVIDADE  -----------------------
+//  ----------------------- EXERCÍCIO 6  -----------------------
 // Função para criar uma const String
 function criarConst() {
     input1 = document.getElementById("aula1Ex6Input1");
@@ -216,7 +246,7 @@ function criarConst() {
     alert(bemVindo);
 }
 
-//  ----------------------- SÉTIMA ATIVIDADE  -----------------------
+//  ----------------------- EXERCÍCIO 7  -----------------------
 // Função para comparar notas
 function compararNotas() {
     inputNotas = document.getElementById("aula1Ex7Input1");
@@ -247,8 +277,22 @@ function compararNotas() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ------------------------------------------------- AULA 2 ------------------------------------------------------------
-// ----------------------- PRIMEIRA ATIVIDADE  -----------------------
+// ----------------------- EXERCÍCIO 1 -----------------------
 // Função para gerar números aleatórios
 function gerarNumeros() {
     function getRandom(min, max) {
@@ -270,7 +314,7 @@ function gerarNumeros() {
     console.log("Maior valor:"+inputResu);
 }
 
-// ------------------------------------------------- Exercicio 2 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 2  -----------------------
 function mostrarFrases(caracteres) {
     let frases = [
         'Nossas dúvidas são traidoras e nos fazem perder o que, com frequência, poderíamos ganhar, por simples medo de arriscar.  -  William Shakespare',
@@ -288,8 +332,8 @@ function mostrarFrases(caracteres) {
     let aleatorio = Math.floor(Math.random() * (frases.length));
     let mostrar2 = document.getElementById("mostrar2");
     let resu2 = document.getElementById("resu2");
-    let mostrar10 = document.getElementById("mostrar10");
-    let resu10 = document.getElementById("resu10");
+    let pt2Mostrar1 = document.getElementById("pt2Mostrar1");
+    let pt2Resu1 = document.getElementById("pt2Resu1");
 
     switch (caracteres) {
         case "todos":
@@ -297,16 +341,16 @@ function mostrarFrases(caracteres) {
             resu2.value = frases[aleatorio].length;     
         break;
         case "vogais":
-            mostrar10.value = frases[aleatorio];
+            pt2Mostrar1.value = frases[aleatorio];
 
-            resu10.value = frases[aleatorio].match(/[aeiouáàâãéèêíïóôõöú]/gi).length;
+            pt2Resu1.value = frases[aleatorio].match(/[aeiouáàâãéèêíïóôõöú]/gi).length;
             stringArray = frases[aleatorio].match(/[aeiouáàâãéèêíïóôõöú]/gi);
             console.log(stringArray.toString());
         break;
     }
 }
 
-// ------------------------------------------------- Exercicio 3 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 3  -----------------------
 function mostrarEmail() {
     let mostrar3 = document.getElementById("mostrar3");
     let resu3 = document.getElementById("resu3");
@@ -326,7 +370,7 @@ function mostrarEmail() {
     }
 }
 
-// ------------------------------------------------- Exercicio 4 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 4  -----------------------
 
 function frutas() {
     let frutasInput = document.getElementById("mostrar4");
@@ -349,7 +393,7 @@ function frutas() {
     }
 }
 
-// ------------------------------------------------- Exercicio 5 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 5  -----------------------
 function dobrar() {
     let valor = document.getElementById("mostrar5").value;
     let returnValor = document.getElementById("resu5");
@@ -357,7 +401,7 @@ function dobrar() {
     returnValor.value = valor * 2; 
 }
 
-// ------------------------------------------------- Exercicio 6 --------------------------------------------------------
+// ----------------------- EXERCÍCIO 6  -----------------------
 function dobrarArray() {
     inputMostrar = document.getElementById("mostrar6");
     inputResu = document.getElementById("resu6");
@@ -383,7 +427,7 @@ function dobrarArray() {
     inputResu.value = dobrarArray; 
 }
 
-// ------------------------------------------------- Exercicio 7 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 7  -----------------------
 function arrayLiteral() {
     let zoologico = ["Piton", "Surucucu", "Cascavel", "Naja", "Jiboia"];
     inputValue = document.getElementById("mostrar7");
@@ -396,7 +440,7 @@ function arrayLiteral() {
     console.log(zoologico);
 }
 
-// ------------------------------------------------- Exercicio 8 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 8  -----------------------
 function upperCase() {
     inputMostrar = document.getElementById("mostrar8");
     inputResu = document.getElementById("resu8");
@@ -407,7 +451,7 @@ function upperCase() {
     inputResu.value = stringMaiscula;
 }
 
-// ------------------------------------------------- Exercicio 9 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 9  -----------------------
 function parametros() {
     inputValue = document.getElementById("mostrar9").value;
     inputResu = document.getElementById("resu9");
@@ -419,6 +463,120 @@ function parametros() {
         return novaVariavel;
     }
 }
+
+// ------------------------------------------------- PARTE 2 -------------------------------------------------------
+// ----------------------- EXERCÍCIO 1  -----------------------
+// Crie uma função que receba uma string e retorne o número de vogais presentes nessa string.
+// Acoplei junto ao exercício 2 da parte 1.
+
+// ----------------------- EXERCÍCIO 2  -----------------------
+// Crie uma função que receba um número e retorne o fatorial desse número.
+function factorial() {
+    pt2Mostrar2 = document.getElementById("pt2Mostrar2");
+    pt2Resu2 = document.getElementById("pt2Resu2");
+    numero = pt2Mostrar2.value;
+    
+    function formula(n) {
+        var result = 1;
+      
+        while (n > 1) {
+            result *= n;
+            console.log(result);
+            n--;
+        }
+      
+        return result;
+    }
+    
+    if (numero == "") {
+        alert("Insira um número por favor!");
+    } else {
+        result = formula(numero);
+        console.log("The factorial of " + numero + " is: " + result);
+        pt2Resu2.value = result;
+    }
+}
+
+// ----------------------- EXERCÍCIO 3  -----------------------
+// Crie um formulário HTML que tenha um campo de entrada de texto para o nome e outro para o e-mail.
+// Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente 
+// (ou seja, se o campo de nome não está vazio e se o campo de e-mail contém um endereço de e-mail válido).
+function validarEmail(field) {
+    usuario = field.value.substring(0, field.value.indexOf("@"));
+    dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+    
+    if ((usuario.length >=3) &&
+        (dominio.length >=3) &&
+        (usuario.search("@")==-1) &&
+        (dominio.search("@")==-1) &&
+        (usuario.search(" ")==-1) &&
+        (dominio.search(" ")==-1) &&
+        (usuario.search(".")!=-1) &&
+        (dominio.search(".")!=-1) &&
+        (usuario.indexOf(".")>=1) &&
+        (dominio.indexOf(".")>=1) &&
+        (usuario.lastIndexOf(".") < usuario.length -1) &&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+            document.getElementById("msgemail").innerHTML="E-mail válido";
+            console.log("E-mail válido");
+        } else {
+            document.getElementById("msgemail").innerHTML="E-mail inválido";
+            console.log("E-mail inválido");
+        }
+    }
+
+function validarNome(field) {
+    nome = field.value.substring(0, field.value.indexOf(" "));
+    sobrenome = field.value.substring(field.value.indexOf(" ") + 1, field.value.length);
+
+    if ((nome.lenght >=3) &&
+        (nome.search(" ")==-1) && 
+        (sobrenome.lenght >=3) &&
+        (sobrenome.search(" ")==-1)) {
+            document.getElementById("msgnome").innerHTML="Nome válido";
+            console.log("Nome válido");
+        } else {
+            document.getElementById("msgnome").innerHTML="Nome inválido";
+            console.log("Nome inválido");
+    }
+}
+  
+// ----------------------- EXERCÍCIO 4  -----------------------
+// Crie um formulário HTML que tenha um campo de entrada de número para a idade e outro para a altura em centímetros.
+// Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente 
+// (ou seja, se a idade está entre 18 e 60 anos e se a altura está entre 150 e 200 centímetros).
+function validarIdade(field) {
+    idade = field.value;
+
+    if ((idade >= 18) && (idade <= 60)) {
+        document.getElementById("msgidade").innerHTML="Idade válida";
+        console.log("Idade válida");
+    } else if ((idade < 18) || (idade > 60)) {
+        document.getElementById("msgidade").innerHTML="Idade inválida";
+        console.log("Idade inválida")
+    };
+}
+
+function validarAltura(field) {
+    altura = field.value;
+
+    if ((altura >= 150) && (altura <= 200)) {
+        document.getElementById("msgaltura").innerHTML="Altura válida";
+        console.log("Altura válida");
+    } else {
+        document.getElementById("msgaltura").innerHTML="Altura inválida";
+        console.log("Altura inválida");
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -434,12 +592,13 @@ function parametros() {
 
 
 // ------------------------------------------------- AULA 3 ------------------------------------------------------------
-// ----------------------- PRIMEIRA ATIVIDADE  -----------------------
+// ------------------------------------------------- TEMPLATE LITERALS ------------------------------------------------------------
+// ----------------------- EXERCÍCIO 1  -----------------------
 // Crie uma função que recebe um nome e retorna uma string utilizando template literals para dar boas-vindas ao usuário.
 
 function aula3Ex1() {
-    let inputNome = document.getElementById("aula3Ex1Input1");
-    let inputMostrar = document.getElementById("aula3Ex1Input2"); 
+    let inputNome = document.getElementById("aula3Pt1Ex1Input1");
+    let inputMostrar = document.getElementById("aula3Pt1Ex1Input2"); 
     nome = inputNome.value;
 
     stringBemVindo = `Bem-vindo ${nome}`;
@@ -452,12 +611,124 @@ function aula3Ex1() {
     }
 }
 
-// ----------------------- SEGUNDA ATIVIDADE  -----------------------
+// ----------------------- EXERCÍCIO 2  -----------------------
 // Crie uma função que recebe uma data e retorna uma string formatada utilizando template literals.
 function aula3Ex2() {
-    let inputData = document.getElementById("aula3Ex2Input1");
-    let inputMostrar = document.getElementById("aula3Ex2Input2");
+    inputData = document.getElementById("aula3Pt1Ex2Input1");
+    inputResu = document.getElementById("aula3Pt1Ex2Input2");
     data = inputData.value;
-
-    stringDataFormatada = ``
+    dia = data.substring(8, 10);
+    mes = data.substring(5, 7);
+    ano = data.substring(0, 4);
+    dataFormatada= `Dia ${dia} do ${mes} de ${ano}`;
+    
+    inputResu.value = dataFormatada;
+    console.log(dataFormatada);
 }
+
+// ----------------------- EXERCÍCIO 3  -----------------------
+// Crie uma função que recebe um objeto com as informações de um produto e retorna uma string utilizando 
+// template literals para exibir as informações na tela.
+function aula3Ex3() {
+    input1 = document.getElementById("aula3Pt1Ex3Input1");
+
+    const produto = {id: 1, nome: "Caneta", tipo: "Bic", espessura: 0.7, cor: "Azul", preco: 5.99};
+
+    descricao = `${produto.nome} ${produto.tipo} ${produto.espessura} na cor ${produto.cor} por apenas R$ ${produto.preco} a unidade.`;
+    input1.value = descricao;
+}
+
+
+// ------------------------------------------------- ARROW FUNCTIONS ------------------------------------------------------------
+// -----------------------  EXERCÍCIO 1  -----------------------
+// Crie uma função que recebe um array de números e utiliza arrow function para retornar a soma de todos eles.
+function aula3Pt2Ex1() {
+    input1 = document.getElementById("aula3Pt2Ex1Input1");
+    
+    const getRandomArray = (length, min, max) => 
+            Array.from({ length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
+    
+    const arrayDeNumeros = getRandomArray(5, 0, 100);
+    
+    arraySomado = arrayDeNumeros.reduce((accumulator,value) => accumulator + value,0);
+
+    input1.value = arrayDeNumeros.join(" + ") + " = " + arraySomado;
+}
+
+// -----------------------  EXERCÍCIO 2  -----------------------
+// Crie uma função que recebe um array de strings e utiliza arrow function para retornar o número total de 
+// caracteres em todas as strings.
+function aula3Pt2Ex2() {
+    input1 = document.getElementById("aula3Pt2Ex2Input1");
+
+    let frasesFilosofos = [
+        "A vida examinada não vale a pena ser vivida. - Sócrates",
+        "Penso, logo existo. - René Descartes",
+        "O homem é a medida de todas as coisas. - Protágoras",
+        "A religião é o ópio do povo. - Karl Marx",
+        "O que sabemos é uma gota, o que ignoramos é um oceano. - Isaac Newton"
+    ];
+    console.log(frasesFilosofos.toString());
+
+    const countTotalCharacters = (array) => array.reduce((total, string) => total + string.length, 0);
+    totalCaracteres = countTotalCharacters(frasesFilosofos);
+    input1.value = totalCaracteres;
+}
+
+// -----------------------  EXERCÍCIO 3  -----------------------
+// Crie uma função que recebe um objeto com informações de um produto e utiliza arrow function para retornar
+// a descrição do produto em uma string.
+function aula3Pt2Ex3() {
+    const produto = {id: 1, nome: "Caneta", tipo: "Bic", espessura: 0.7, cor: "Azul", preco: 5.99};
+    
+    const getProductDescription = (product) => {
+        const { nome, tipo, espessura, cor, preco } = product;
+        return `Produto: ${nome} | Tipo: ${tipo} | Espessura: ${espessura} | Cor: ${cor} | Preço: $${preco}`;
+    };
+    
+    produtoDescrito = getProductDescription(produto);
+    document.getElementById("aula3Pt2Ex3Input1").value = produtoDescrito;
+
+}
+
+
+// ------------------------------------------------- JSON ------------------------------------------------------------
+// -----------------------  EXERCÍCIO 1  -----------------------
+// Crie um objeto JSON com informações sobre uma pessoa, como nome, idade e endereço.
+function aula3Pt3Ex1() {
+    pessoa = {
+        nome: "João",
+        idade: 25,
+        endereco: {
+            rua: "Rua Principal",
+            numero: 123,
+            cidade: "Hogwarts",
+            estado: "Uchoa isles",
+            pais: "Silviolandia"
+        }
+    };
+      
+      console.log(JSON.stringify(pessoa));
+      
+
+}
+
+
+// -----------------------  EXERCÍCIO 2  -----------------------
+// Crie uma função que recebe um objeto JSON com informações de um produto e retorna uma string com o nome
+// e o preço do produto.
+
+
+
+// -----------------------  EXERCÍCIO 3  -----------------------
+// Crie uma função que recebe um array de objetos JSON com informações de produtos e retorna uma string com
+// o nome e o preço de cada um dos produtos.
+
+
+
+// --------------------------------------- TEMPLATE LITERALS + ARROW FUNCTIONS -----------------------------------------
+
+
+// -----------------------  EXERCÍCIO 1  -----------------------
+// -----------------------  EXERCÍCIO 2  -----------------------
+// -----------------------  EXERCÍCIO 3  -----------------------

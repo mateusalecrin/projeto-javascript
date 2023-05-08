@@ -44,6 +44,7 @@ body {
 }
 
 .navigation {
+    width: 100%;
     margin-top: 2px;
     border-radius: 10px;
     padding: 0px;
@@ -167,7 +168,7 @@ input::placeholder {
     letter-spacing: 3px;
 }
 
-#mostrar2, #mostrar10 {
+#mostrar2, #pt2Mostrar1, #aula3Pt1Ex3Input1, #aula3Pt2Ex3Input1 {
     resize: none;
     height: 70px;
     overflow: hidden;
@@ -196,35 +197,17 @@ section.menu-on {
     width: 45%;
 }
 
-
-
-
-
-
-
-/* EM CONSTRUÇÃO AULA3 E 4 */
-.lamp-container {
-    margin: 10px;
-    border-radius: 10px;
+fieldset {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #0e0d0d;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 50px;
+    border-radius: 10px;
 }
 
-.lamp {
-    z-index: 1;
-    width: 10%;
-}
-
-.light {
-    transform: translateX(-1%);
-    width: 35%;
-    z-index: 1;
-}
-
-#construction {
-    margin: 10px;
+label {
+    margin: auto;
+    padding: 5px;
 }
