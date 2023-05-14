@@ -76,7 +76,7 @@
                 <input id="aula1Ex6Input1" class="exercicios-input" type="text" disabled>
             </article>
 
-            <article class="exercicios">
+            <article class="exercicios" id="exercicios-fullwidth">
                 <h1 class="exercicios-titulo">Exercício 7</h1>
                 <p class="exercicios-texto">Faça uma comparação onde caso o usuario Nota > 7 = Passou de ano, Nota == 5 = Recuperação, Nota < 5 = Reprovado.</p>
                 <input id="aula1Ex7Input1" class="exercicios-input mostrar" type="number" oninput="compararNotas()" placeholder="Notas">
@@ -147,7 +147,7 @@
                     <button class="button" id="upperCase" type="button" onclick="upperCase()">Run</button>
                     <input class="exercicios-input resultado" type="text" id="resu8">
                 </article>
-                <article class="exercicios" id="exercicio9">
+                <article class="exercicios" id="exercicios-fullwidth">
                     <h1 class="exercicios-titulo">Exercício 9</h1>
                     <p class="exercicios-texto">Crie uma função que receba uma variável como parâmetro e, em seguida, armazene esse parâmetro em uma nova variável. Em seguida, retorne a nova variável.</p>
                     <input class="exercicios-input mostrar" type="text" id="mostrar9">
@@ -212,6 +212,7 @@
                 <button class="navigation-options" onclick="toggleDisplay('aula3Parte1')">Template Literals</button>
                 <button class="navigation-options" onclick="toggleDisplay('aula3Parte2')">Arrow Functions</button>
                 <button class="navigation-options" onclick="toggleDisplay('aula3Parte3')">JSON</button>
+                <button class="navigation-options" onclick="toggleDisplay('aula3Parte4')">Literals + Arrow + JSON</button>
             </nav>
 
             <section class="aulas" id="aula3Parte1">
@@ -231,7 +232,7 @@
                     <input id="aula3Pt1Ex2Input2" class="exercicios-input resultado" type="text" disabled>
                 </article>
 
-                <article class="exercicios">
+                <article class="exercicios" id="exercicios-fullwidth">
                     <h1 class="exercicios-titulo">Exercício 3</h1>
                     <p class="exercicios-texto">Crie uma função que recebe um objeto com as informações de um produto e retorna uma string utilizando template literals para exibir as informações na tela.</p>
                     <textarea id="aula3Pt1Ex3Input1" class="exercicios-input resultado"></textarea>
@@ -254,7 +255,7 @@
                     <button class="button" onclick="aula3Pt2Ex2()">Run</button>
                 </article>
 
-                <article class="exercicios">
+                <article class="exercicios" id="exercicios-fullwidth">
                     <h1 class="exercicios-titulo">Exercício 3</h1>
                     <p class="exercicios-texto">Crie uma função que recebe um objeto com informações de um produto e utiliza arrow function para retornar a descrição do produto em uma string.</p>
                     <textarea id="aula3Pt2Ex3Input1" class="exercicios-input resultado" disabled></textarea>
@@ -269,16 +270,52 @@
                     <textarea id="aula3Pt3Ex1Input1" class="exercicios-input resultado" disabled></textarea>
                     <button class="button" onclick="aula3Pt3Ex1()">Run</button>
                 </article>
+
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 2</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um objeto JSON com informações de um produto e retorna uma string com o nome e o preço do produto.</p>
+                    <textarea id="aula3Pt3Ex2Input1" class="exercicios-input resultado" disabled></textarea>
+                    <button class="button" onclick="aula3Pt3Ex2()">Run</button>
+                </article>
+
+                <article class="exercicios" id="exercicios-fullwidth">
+                    <h1 class="exercicios-titulo">Exercício 3</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um array de objetos JSON com informações de produtos e retorna uma string com o nome e o preço de cada um dos produtos.</p>
+                    <textarea id="aula3Pt3Ex3Input1" class="exercicios-input resultado" disabled></textarea>
+                    <button class="button" onclick="aula3Pt3Ex3()">Run</button>
+                </article>
+            </section>
+
+            <section class="aulas" id="aula3Parte4">
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 1</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals e arrow function para retornar uma string com o nome e o preço de cada um dos produtos.</p>
+                    <textarea id="aula3Pt4Ex1Input1" class="exercicios-input resultado" disabled></textarea>
+                    <button class="button" onclick="aula3Pt4Ex1()">Run</button>
+                </article>
+
+                <article class="exercicios">
+                    <h1 class="exercicios-titulo">Exercício 2</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals e arrow function para retornar uma TABELA HTML com as informações de cada produto.</p>
+                    <div id="aula3Pt4Ex2Input1" class="exercicios-input resultado"></div>
+                    <button class="button" onclick="aula3Pt4Ex2()">Run</button>
+                </article>
+
+                <article class="exercicios" id="exercicios-fullwidth">
+                    <h1 class="exercicios-titulo">Exercício 3</h1>
+                    <p class="exercicios-texto">Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals e arrow function para retornar uma LISTA HTML com as informações de cada produto.</p>
+                    <div id="aula3Pt4Ex3Input1" class="exercicios-input resultado"></div>
+                    <button class="button" onclick="aula3Pt4Ex3()">Run</button>
+                </article>
+
+
+
             </section>
 
         </section>
 
         <section class="aulas" id="aula4">
-            <div class="lamp-container">
-                <img src="../images/lamp.png" class="lamp" alt="Luminária">
-                <img src="../images/light.png" class="light" id="light" alt="Luz da luminária">
-                <h1 class="exercicios-titulo" id="construction">Em construção</h1>
-            </div>
+            
         </section>
     </main>
 </body>

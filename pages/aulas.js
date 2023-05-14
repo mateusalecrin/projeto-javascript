@@ -8,6 +8,7 @@ function toggleDisplay(aula) {
     let toggleAula3Pt1 = document.getElementById("aula3Parte1");
     let toggleAula3Pt2 = document.getElementById("aula3Parte2");
     let toggleAula3Pt3 = document.getElementById("aula3Parte3");
+    let toggleAula3Pt4 = document.getElementById("aula3Parte4");
     let toggleAula4 = document.getElementById("aula4");
 
 
@@ -47,16 +48,25 @@ function toggleDisplay(aula) {
             toggleAula3Pt1.classList.toggle("menu-on");
             toggleAula3Pt2.classList.remove("menu-on");
             toggleAula3Pt3.classList.remove("menu-on");
+            toggleAula3Pt4.classList.remove("menu-on");
         break;
         case "aula3Parte2":
             toggleAula3Pt1.classList.remove("menu-on");
             toggleAula3Pt2.classList.toggle("menu-on");
             toggleAula3Pt3.classList.remove("menu-on");
+            toggleAula3Pt4.classList.remove("menu-on");
         break;
         case "aula3Parte3":
             toggleAula3Pt1.classList.remove("menu-on");
             toggleAula3Pt2.classList.remove("menu-on");
             toggleAula3Pt3.classList.toggle("menu-on");
+            toggleAula3Pt4.classList.remove("menu-on");
+        break;
+        case "aula3Parte4":
+            toggleAula3Pt1.classList.remove("menu-on");
+            toggleAula3Pt2.classList.remove("menu-on");
+            toggleAula3Pt3.classList.remove("menu-on");
+            toggleAula3Pt4.classList.toggle("menu-on");
         break;
         case "aula4":
             toggleAula4.classList.toggle("menu-on");
@@ -570,32 +580,10 @@ function validarAltura(field) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ------------------------------------------------- AULA 3 ------------------------------------------------------------
 // ------------------------------------------------- TEMPLATE LITERALS ------------------------------------------------------------
 // ----------------------- EXERCÍCIO 1  -----------------------
 // Crie uma função que recebe um nome e retorna uma string utilizando template literals para dar boas-vindas ao usuário.
-
 function aula3Ex1() {
     let inputNome = document.getElementById("aula3Pt1Ex1Input1");
     let inputMostrar = document.getElementById("aula3Pt1Ex1Input2"); 
@@ -679,9 +667,9 @@ function aula3Pt2Ex2() {
 // Crie uma função que recebe um objeto com informações de um produto e utiliza arrow function para retornar
 // a descrição do produto em uma string.
 function aula3Pt2Ex3() {
-    const produto = {id: 1, nome: "Caneta", tipo: "Bic", espessura: 0.7, cor: "Azul", preco: 5.99};
+    let produto = {id: 1, nome: "Caneta", tipo: "Bic", espessura: 0.7, cor: "Azul", preco: 5.99};
     
-    const getProductDescription = (product) => {
+    let getProductDescription = (product) => {
         const { nome, tipo, espessura, cor, preco } = product;
         return `Produto: ${nome} | Tipo: ${tipo} | Espessura: ${espessura} | Cor: ${cor} | Preço: $${preco}`;
     };
@@ -707,28 +695,149 @@ function aula3Pt3Ex1() {
             pais: "Silviolandia"
         }
     };
-      
-      console.log(JSON.stringify(pessoa));
-      
-
+    console.log(JSON.stringify(pessoa));
+    document.getElementById("aula3Pt3Ex1Input1").value = JSON.stringify(pessoa);
 }
-
 
 // -----------------------  EXERCÍCIO 2  -----------------------
 // Crie uma função que recebe um objeto JSON com informações de um produto e retorna uma string com o nome
 // e o preço do produto.
+function aula3Pt3Ex2() {
+    let getProductInfo = (product) => {
+        let { nome, tipo, marca, modelo, preco } = product; // Desestruturação do objeto para obter as propriedades name e price
+        return `Produto: ${nome} Tipo: ${tipo} Marca: ${marca} Modelo: ${modelo} Preco: $${preco}`;
+      };
 
+    let produto = {
+        nome: "Celular",
+        tipo: "Smartphone",
+        marca: "Iphone",
+        modelo: "XR MAX",
+        preco: 1599.99
+    };
 
+    result = getProductInfo(produto);
+    console.log(produto);
+
+    document.getElementById("aula3Pt3Ex2Input1").value = result;
+}
 
 // -----------------------  EXERCÍCIO 3  -----------------------
 // Crie uma função que recebe um array de objetos JSON com informações de produtos e retorna uma string com
 // o nome e o preço de cada um dos produtos.
+function aula3Pt3Ex3() {
+    getProductInfo = (product) => {
+       return product.map(product =>`${product.nome} ${product.tipo} ${product.marca} ${product.modelo} $${product.preco}`).join(', ');
+      };
 
+    let produto = [{nome: "Celular", tipo: "Smartphone", marca: "Iphone", modelo: "XR MAX", preco: 1599.99},
+                  {nome: "Celular", tipo: "Smartphone", marca: "Samsumg", modelo: "S22", preco: 2029.99},
+                  {nome: "Celular", tipo: "Smartphone", marca: "Redmi", modelo: "Note 9", preco: 1069.99}];
+                
+    result = getProductInfo(produto);
+    
+    console.log(result);
+    document.getElementById("aula3Pt3Ex3Input1").value = result;
+}
 
 
 // --------------------------------------- TEMPLATE LITERALS + ARROW FUNCTIONS -----------------------------------------
-
-
 // -----------------------  EXERCÍCIO 1  -----------------------
+// Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals 
+// e arrow function para retornar uma string com o nome e o preço de cada um dos produtos.
+function aula3Pt4Ex1() {
+    // Mesmo que o exercicio anterior, pois já havia usado template literals como retorno.
+    getProductInfo = (product) => {
+        return product.map(product =>`${product.nome} ${product.tipo} ${product.marca} ${product.modelo} $${product.preco}`).join(', ');
+    };
+ 
+     let produto = [{nome: "Celular", tipo: "Smartphone", marca: "Iphone", modelo: "XR MAX", preco: 1599.99},
+                   {nome: "Celular", tipo: "Smartphone", marca: "Samsumg", modelo: "S22", preco: 2029.99},
+                   {nome: "Celular", tipo: "Smartphone", marca: "Redmi", modelo: "Note 9", preco: 1069.99}];
+                 
+     result = getProductInfo(produto);
+     
+     console.log(result);
+     document.getElementById("aula3Pt4Ex1Input1").value = result;
+
+
+
+}
+
 // -----------------------  EXERCÍCIO 2  -----------------------
+// Crie uma função que recebe um array de objetos JSON com informações de produtos e utiliza template literals
+// e arrow function para retornar uma tabela HTML com as informações de cada produto.
+function aula3Pt4Ex2() {
+    let produto = [{nome: "Celular", tipo: "Smartphone", marca: "Iphone", modelo: "XR MAX", preco: 1599.99},
+                  {nome: "Celular", tipo: "Smartphone", marca: "Samsumg", modelo: "S22", preco: 2029.99},
+                  {nome: "Celular", tipo: "Smartphone", marca: "Redmi", modelo: "Note 9", preco: 1069.99}];
+    
+    createProductTable = (product) => {
+        tableRows = product.map(product => `
+        <tr>
+            <td style="padding: 0.5px 5px">${product.nome}</td>
+            <td style="padding: 0.5px 5px">${product.tipo}</td>
+            <td style="padding: 0.5px 5px">${product.marca}</td>
+            <td style="padding: 0.5px 5px">${product.modelo}</td>
+            <td style="padding: 0.5px 5px">$${product.preco}</td>
+        </tr>`);
+        
+
+        table = `
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Tipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Preco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${tableRows.join('')}
+                </tbody>
+            </table>
+        `;
+                 
+     return table;
+    }
+
+    tabelaHTML = createProductTable(produto);
+    console.log(tabelaHTML);
+    divEx2 = document.getElementById("aula3Pt4Ex2Input1");
+    divEx2.innerHTML = tabelaHTML;
+
+}
+
 // -----------------------  EXERCÍCIO 3  -----------------------
+function aula3Pt4Ex3() {
+    let produto = [{nome: "Celular", tipo: "Smartphone", marca: "Iphone", modelo: "XR MAX", preco: 1599.99},
+                  {nome: "Celular", tipo: "Smartphone", marca: "Samsumg", modelo: "S22", preco: 2029.99},
+                  {nome: "Celular", tipo: "Smartphone", marca: "Redmi", modelo: "Note 9", preco: 1069.99}];
+    
+    createProductList = (product) => {
+        listRows = product.map(product => `
+        <li>
+            <li style="padding: 3px 5px">${product.nome}</li>
+            <li style="padding: 3px 5px">${product.tipo}</li>
+            <li style="padding: 3px 5px">${product.marca}</li>
+            <li style="padding: 3px 5px">${product.modelo}</li>
+            <li style="padding: 3px 5px">$${product.preco}</li>        
+        </li>`);
+        
+
+        list = `
+        <ul style="columns: 3; list-style: none; padding: 20px">
+            ${listRows.join('')}
+        </ul>`;
+                 
+     return list;
+    }
+
+    listHTML = createProductList(produto);
+    console.log(listHTML);
+    divEx3 = document.getElementById("aula3Pt4Ex3Input1");
+    divEx3.innerHTML = listHTML;
+
+} 

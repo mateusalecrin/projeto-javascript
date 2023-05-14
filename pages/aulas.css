@@ -114,6 +114,7 @@ body {
     justify-content: space-evenly;
     backdrop-filter: blur(30px);
     background: rgba(0,0,0,.3);
+    overflow: hidden;
 
 }
 
@@ -168,11 +169,21 @@ input::placeholder {
     letter-spacing: 3px;
 }
 
-#mostrar2, #pt2Mostrar1, #aula3Pt1Ex3Input1, #aula3Pt2Ex3Input1 {
+#mostrar2, #pt2Mostrar1, #aula3Pt1Ex3Input1, #aula3Pt2Ex3Input1, #aula3Pt3Ex1Input1, #aula3Pt3Ex2Input1, #aula3Pt3Ex3Input1, #aula3Pt4Ex1Input1, #aula3Pt4Ex2Input1 {
     resize: none;
     height: 70px;
     overflow: hidden;
     font-size: 14px;
+}
+
+#aula3Pt4Ex3Input1 {
+    height: 150px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#exercicios-fullwidth {
+    width: 83%;
 }
 
 .gifs {
@@ -189,6 +200,7 @@ input::placeholder {
 }
 
 section.menu-on {
+    margin: 0px;
     height: fit-content;
     opacity: 1;
 }
