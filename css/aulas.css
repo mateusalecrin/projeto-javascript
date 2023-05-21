@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
@@ -23,16 +26,6 @@ body {
     from {background-position: top;background-size:3000px; }
     to {background-position: -100px 0px;background-size:2750px;}
     
-}
-
-.radial-gradient {
-    background: radial-gradient(circle,rgba(0,0,0,.6)0%,rgba(0,0,0,0)100%);
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
 }
 
 .conteudo {
@@ -222,4 +215,73 @@ fieldset {
 label {
     margin: auto;
     padding: 5px;
+}
+
+.pokedexSection {
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 1s;
+    margin: 15px 0;
+    border-radius: 15px;
+    color: black;
+}
+
+.pokeTitulo {
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin: 15px;
+    
+}
+
+.pokeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.pokemon {
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+.imgContainer img {
+    max-width: 90%;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.number {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 2px 13px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.name {
+    margin: 15px 0 7px;
+    letter-spacing: 1.5px;
 }
